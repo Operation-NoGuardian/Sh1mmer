@@ -1,0 +1,10 @@
+echo "IMPORTANT!"
+echo "THIS PAYLOAD WILL STOP YOUR CHROMEBOOK FROM UPDATING"
+echo "IF YOU RECOVER YOUR CHROMEBOOK THESE CHANGES GO AWAY, MAKE SURE TO DO THIS AGAIN"
+
+sleep 5
+mkdir /tmp/m
+mount /dev/mmcblk0p1 /tmp/m
+printf "CHROMEOS_RELEASE_VERSION=9999.9999.9999.9999\nGOOGLE_RELEASE=9999.9999.9999.9999" >>/tmp/m/etc/lsb-release
+sleep 1
+read "Done. Press enter to continue"
